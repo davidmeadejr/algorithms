@@ -34,17 +34,4 @@ def twoSum(nums, target):
                 return [i, j]
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                
