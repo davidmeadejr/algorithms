@@ -1,6 +1,6 @@
 # LeetCode Practise Log
 
-I've set myself the challenge to "git gud" at Data Structures & Algorithms (DSA) style questions and FAANG-style coding interviews by tackling the Blind 75 questions.Providing both a brute force (worst case scenario) and a most optimal (best case scenario) solution for each.
+I've set myself the challenge to "git gud" at Data Structures & Algorithms (DSA) style questions and FAANG-style coding interviews by tackling the Blind 75 questions. Providing both a brute force (worst case scenario) and a most optimal (best case scenario) solution for each.
 
 More questions will be added once I've solved all the Blind 75 questions.
 

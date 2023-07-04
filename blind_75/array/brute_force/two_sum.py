@@ -25,11 +25,9 @@ Input: nums = [3,3], target = 6
 Output: [0,1]
 """
 
+
 def twoSum(nums, target):
-    for i in range(lens(nums)):
-        for j in range(i + 1, lens(nums)):
-            if nums[i] + num[j] == target:
+    for i in range(len(nums)):
+        for j in range(i + 1, len(nums)):
+            if nums[i] + nums[j] == target:
                 return [i, j]
-
-
-
