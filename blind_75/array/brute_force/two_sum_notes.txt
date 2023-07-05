@@ -1,4 +1,7 @@
-pattern: nested loop
-BF Solution: Use a "nested loop" to traverse the list, checking each pair of numbers; if the sum of two numbers equals the target, return their indices.
-Time Complexity: 0(n^2) also known as quadratic time.
-Reasoning for time complexity: If each element in the input requires a loop over all other elements, the time complexity is likely O(n^2).
+*pattern*: nested loop
+
+*BF Solution*: Use a "nested loop" to traverse the list, checking each pair of numbers; if the sum of two numbers equals the target, return their indices.
+
+*Time Complexity*: 0(n^2) also known as quadratic time.
+
+*Time Complexity Explanation*: If each element in the input requires a loop over all other elements, the time complexity is likely O(n^2).
