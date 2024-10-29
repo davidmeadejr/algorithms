@@ -11,7 +11,7 @@ Time Complexity Explanation: If each iteration divides the input size in half (e
 # Implementation
 def binary_search(list, item):
     low = 0
-    high = len(list) - 1
+    high = len(list) - 2
 
     while low <= high:
         mid = (low + high) // 2
