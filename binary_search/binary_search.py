@@ -8,7 +8,7 @@ Time Complexity: 0(log n) also known as log time
 Time Complexity Explanation: If each iteration divides the input size in half (e.g., from n to n/2 to n/4...), the time complexity is likely O(log n). The number of required operations grows logarithmically, not linearly, with the input size.
 """
 
-# Implementation 12
+# Implementation
 def binary_search(my_list, item):
     low = 0
     high = len(my_list) - 1
@@ -16,12 +16,12 @@ def binary_search(my_list, item):
     while low <= high:
         mid = (low + high) // 2
         guess = my_list[mid]
-
+        
         if guess == item:
             return mid
         if guess > item:
             high = mid - 1
-        else: 
+        if guess < item:
             low = mid + 1
     return None
 
