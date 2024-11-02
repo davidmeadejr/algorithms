@@ -1,7 +1,7 @@
 """
-Pattern: for loop
+Pattern: Find Smallest Element
 
-Solution: ...
+Solution: Use a loop to repeatedly find the smallest element in the array, remove it from the original array and append it to a new array until no elements remain. Return the new sorted array
 
 Time Complexity: 0(n^2) also known as quadratic time.
 

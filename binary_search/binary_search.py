@@ -1,5 +1,5 @@
 """
-Pattern: while loop
+Pattern: Divide and Conquer
 
 Solution: Use a "while loop" to repeatedly divide the search space in half, comparing the middle element with the target value. Adjust the search space (low/high bounds) based on whether the target is greater or less than the middle element.
 
