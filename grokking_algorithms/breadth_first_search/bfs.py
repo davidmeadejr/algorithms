@@ -6,8 +6,7 @@ Pattern: Breadth-First Search (BFS)
 Solution: Initialize a queue with people to check and a list of those already checked; while the queue isn’t empty, remove the first person, check if they’re a mango seller (returning True if so), otherwise add their friends to the queue and mark them as checked; return False if no seller is found. 
 
 """
-# Implementation: 3
-
+# Implementation: 12 
 
 graph = {
   "you": ["alice", "bob", "claire"],
@@ -20,21 +19,21 @@ graph = {
   "jonny": [],
 }
 
-def person_is_seller(name):
-  return name == "anuj"
+def mango_seller(name):
+  return name == "David"
 
 def search(name):
-  search_queue = deque()
-  search_queue += graph[name]
-  searched = []
-  while search_queue:
-    person = search_queue.popleft()
-    if not person in searched:
-      if person_is_seller(person):
-        return person + " is a mango seller!"
-      else:
-        search_queue += graph[person]
-        searched.append(person)
-  return "There is no mango sellers :("
+  queue = deque()
+  queue += graph[name]
+  people_already_asked_ls = []
 
+  while queue:
+    person_in_question = queue.popleft()
+    if person_in_question not in people_already_asked_ls:
+      if mango_seller(person_in_question):
+        return person_in_question + " is a mango seller!"
+      else:
+        queue += graph[person_in_question]
+        people_already_asked_ls.append(person_in_question)
+  return "Sorry, looks like there are no mango seller the nearby area."
 print(search("you"))  
