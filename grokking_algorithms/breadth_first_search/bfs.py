@@ -6,9 +6,8 @@ Pattern: Breadth-First Search (BFS)
 Solution: Initialize a queue with people to check and a list of those already checked; while the queue isn’t empty, remove the first person, check if they’re a mango seller (returning True if so), otherwise add their friends to the queue and mark them as checked; return False if no seller is found. 
 
 """
-# Implementation: 12 
-
-graph = {
+ 
+ graph = {
   "you": ["alice", "bob", "claire"],
   "alice": ["peggy"],
   "bob": ["anuj", "peggy"],
