@@ -33,7 +33,8 @@ def search(name):
         return person_in_question + " is a mango seller!"
       else:
         queue += graph[person_in_question]
-        people_already_asked += person_in_question
+        people_already_asked.append(graph[person_in_question])
   return "There is no mango seller in the nearby area."
 
 print(search("you"))  
+

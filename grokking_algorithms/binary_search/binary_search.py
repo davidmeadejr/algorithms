@@ -10,13 +10,13 @@ Time Complexity Explanation: If each iteration divides the input size in half (e
 
 my_list = [1, 3, 5, 7, 9]
 
-def binary_search(arr, target):
+def binary_search(my_list, target):
     low = 0
-    high = len(arr) - 1
+    high = len(my_list) - 1
 
-    for i in range(1, len(arr)):
+    while low <= high:
         mid = (low + high) // 2
-        guess = arr[mid]
+        guess = my_list[mid]
 
         if guess == target:
             return mid
@@ -25,6 +25,7 @@ def binary_search(arr, target):
         else:
             low = mid + 1
     return None
+
 
 
 print(binary_search(my_list, 3)) # => 1
