@@ -22,7 +22,7 @@ def mango_seller(name):
   return name == "anuj"
 
 def search(name):
-  queue = deque()
+  queue = deque();
   queue += graph[name]
   people_already_asked = []
 
@@ -33,8 +33,8 @@ def search(name):
         return person_in_question + " is a mango seller!"
       else:
         queue += graph[person_in_question]
-        people_already_asked.append(graph[person_in_question])
-  return "There is no mango seller in the nearby area."
+        people_already_asked.append(person_in_question)
 
+  return "There is no mango seller nearby."
 print(search("you"))  
 

@@ -16,9 +16,9 @@ def quicksort(arr):
     return arr
   else:
     pivot = arr[0]
-    less = [i for i in arr[1:] if i <= arr[0]]
-    more = [i for i in arr[1:] if i > arr[0]]
-  
+    less = [i for i in arr[1:] if i <= pivot]
+    more = [i for i in arr[1:] if i > pivot]
+
   return quicksort(less) + [pivot] + quicksort(more)
 
 print(quicksort(arr))
