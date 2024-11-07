@@ -3,7 +3,7 @@ Problem: Find the Shortest Path in a Weighted Graph using Dijkstra's Algorithm
 
 You are given a weighted, directed graph represented as a dictionary, where each node
 has a dictionary of neighboring nodes and the associated edge weights. Your task is to 
-find the shortest path from a given start node to a finish node using Dijkstra's algorithm.
+find the shortest path from a given start node to all other nodes using Dijkstra's algorithm.
 
 Graph Representation:
 The graph is represented as a dictionary of dictionaries, where each key is a node, and 
@@ -40,7 +40,6 @@ Function Signatures:
 
 The `dijkstra` function should return:
 - `costs`: A dictionary with the lowest cost to reach each node from the start.
-- `parents`: A dictionary showing the shortest path by storing each node's parent.
 
 Constraints:
 - All edge weights are non-negative.
@@ -70,9 +69,65 @@ Input:
 
 Output:
     ({'a': 5, 'b': 2, 'fin': 6}, {'a': 'b', 'b': 'start', 'fin': 'a'})
-
 """
 
+# Setup for the problem
+# Graph setup with weights
+graph = {
+    "start": {"a": 6, "b": 2},
+    "a": {"fin": 1},
+    "b": {"a": 3, "fin": 5},
+    "fin": {}
+}
+
+# Initialize costs table with initial costs from the start node
+infinity = float("inf")
+costs = {
+    "a": 6,
+    "b": 2,
+    "fin": infinity
+}
+
+# Initialize parents table to track paths
+parents = {
+    "a": "start",
+    "b": "start",
+    "fin": None
+}
+
+# Implementation: 12
+
+# List to track processed nodes
+processed = []
+
+
+# Write code below this line:
+def find_lowest_cost_node(costs):
+    lowest_cost = float("inf")
+    lowest_cost_node = None
+    for node in costs:
+        if costs[node] < lowest_cost and node not in processed:
+            lowest_cost = costs[node]
+            lowest_cost_node = node
+    return lowest_cost_node
+
+
+def dijkstra():
+    node = find_lowest_cost_node(costs)
+    while node is not None:
+        cost = costs[node]
+        neighbours = graph[node]
+        for n in neighbours:
+            new_cost = cost + neighbours[n]
+            if costs[n] > new_cost:
+                costs[n] = new_cost
+                parents[n] = node
+        processed.append(node)
+        node = find_lowest_cost_node(costs)
+
+    return costs
+
 print(dijkstra())
+
 
 
