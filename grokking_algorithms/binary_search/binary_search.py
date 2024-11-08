@@ -9,7 +9,6 @@ Time Complexity Explanation: If each iteration divides the input size in half (e
 """
 
 my_list = [1, 3, 5, 7, 9]
-
 def binary_search(my_list, target):
     low = 0
     high = len(my_list) - 1
@@ -17,7 +16,7 @@ def binary_search(my_list, target):
     while low <= high:
         mid = (low + high) // 2
         guess = my_list[mid]
-        
+
         if guess == target:
             return mid
         if guess > target:
@@ -25,6 +24,7 @@ def binary_search(my_list, target):
         else:
             low = mid + 1
     return None
+
 
 print(binary_search(my_list, 3)) # => 1
 print(binary_search(my_list, -1)) # => None
