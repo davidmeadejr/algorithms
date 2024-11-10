@@ -36,7 +36,8 @@ Explanation: Your function should return k = 5, with the first five elements of 
 It does not matter what you leave beyond the returned k (hence they are underscores).
 
 """
-# implementation: #3
+
+# ---- IMPLMENTATION ---- #
 
 from typing import List
 
@@ -48,14 +49,13 @@ class Solution:
       if nums[right] != nums[right - 1]:
         nums[left] = nums[right]
         left += 1
+    
     return left
 
-
-# Test Cases
+# ---- TEST CASES ---- #
 
 solution = Solution()
 
-# Test case 1
 nums1 = [1, 1, 2]
 k1 = solution.removeDuplicates(nums1) # Expected => [1, 2]
 print(nums1[:k1])
