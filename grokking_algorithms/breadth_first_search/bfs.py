@@ -18,6 +18,7 @@ graph = {
   "jonny": [],
 }
 
+
 def mango_seller(name):
   return name == "anuj"
 
@@ -29,13 +30,13 @@ def search(name):
 
   while queue:
     person_in_question = queue.popleft()
-    if person_in_question != people_already_asked:
-        if mango_seller(person_in_question):
-          return person_in_question + " is a mango seller"
-        else:
-          queue += graph[person_in_question]
-          people_already_asked.append(person_in_question)
-  return "There are no mango sellers in this area"
+    if person_in_question not in people_already_asked:
+      if mango_seller(person_in_question):
+        return person_in_question + " is a mango seller"
+      else:
+        queue += graph[person_in_question]
+        people_already_asked.append(person_in_question)
+  return "There is no mango seller nearby"
 
 print(search("you"))  
 

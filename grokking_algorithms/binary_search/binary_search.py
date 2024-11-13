@@ -10,12 +10,14 @@ def binary_search(my_list, target):
 
     if guess == target:
       return mid
-    elif guess > high:
+    elif guess > target:
       high = mid - 1
     else:
       low = mid + 1
   
   return -1
+
+
 
 print(binary_search(my_list, 3)) # => 1
 print(binary_search(my_list, -1)) # => -1

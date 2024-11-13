@@ -18,18 +18,20 @@ def find_smallest(arr):
 		if arr[i] < smallest:
 			smallest = arr[i]
 			smallest_index = i
-	
+
 	return smallest_index
 
 # Use the selection sort algorithm to sort an array in ascending order
+
 def selection_sort(arr):
 	new_arr = []
 
 	for i in range(len(arr)):
 		smallest = find_smallest(arr)
 		new_arr.append(arr.pop(smallest))
-	
+
 	return new_arr
+
 
 
 print(selection_sort([5, 3, 6, 2, 10]))

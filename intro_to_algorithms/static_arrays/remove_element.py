@@ -28,7 +28,7 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 from typing import List
 
 class Solution:
-  def removeElement(self, nums: List[int], val: int) -> int:
+  def removeElement(self, nums: List[int], val: int) -> List[int]:
     k = 0
 
     for i in range(len(nums)):
@@ -36,7 +36,7 @@ class Solution:
         nums[k] = nums[i]
         k += 1
 
-    return k
+    return k 
 
 
 # ---- TEST CASES ---- #
