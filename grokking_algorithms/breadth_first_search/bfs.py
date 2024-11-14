@@ -19,7 +19,7 @@ graph = {
 }
 
 def mango_seller(name):
-  return name == "peggy"
+  return name == "jonny"
 
 def search(name):
   queue = deque()
@@ -33,7 +33,7 @@ def search(name):
       else:
         queue += graph[person_in_question]
         people_already_asked.append(person_in_question)
-  return "There is no seller in nearby"
+  return "There is no Mango seller nearby"
 
 print(search("you"))  
 

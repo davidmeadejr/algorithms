@@ -34,7 +34,7 @@ class Solution:
       if nums[i] != val:
         nums[k] = nums[i]
         k += 1
-    return k       
+    return k
 
 # ---- TEST CASES ---- #
 solution = Solution()
