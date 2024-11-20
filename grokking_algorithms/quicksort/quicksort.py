@@ -10,7 +10,6 @@ Time Complexity: Depends on the pivot used (see below)
 """
 
 arr = [11, 23, 46, 57, 9, 14, 233, 6, 4, 35]
-
 def quicksort(arr):
   if len(arr) < 2:
     return arr
