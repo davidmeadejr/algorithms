@@ -1,3 +1,4 @@
+
 my_list = [1, 3, 5, 7, 9]
 
 def binary_search(my_list, target):
